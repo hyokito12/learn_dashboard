@@ -18,7 +18,7 @@ class ResponsiveWidget extends StatelessWidget {
   }) : super(key: key);
 
   static bool isSmallScreen(BuildContext context) =>
-      MediaQuery.of(context).size.width < smallScreenSize;
+      MediaQuery.of(context).size.width < mediumScreenSize;
   static bool isMediumScreen(BuildContext context) =>
       MediaQuery.of(context).size.width >= mediumScreenSize &&
       MediaQuery.of(context).size.width < largeScreenSize;
@@ -32,9 +32,9 @@ class ResponsiveWidget extends StatelessWidget {
       if (_width >= largeScreenSize) {
         return largeScreen;
       } else if (_width < largeScreenSize && _width >= mediumScreenSize) {
-        return mediumScreen ?? largeScreen;
+        return mediumScreen;
       } else {
-        return smallScreen ?? largeScreen;
+        return smallScreen;
       }
     });
   }
