@@ -7,10 +7,9 @@ class LargeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
-          child: Container(
-            color: Colors.red,
-          ),
+        Container(
+          width: 300,
+          color: Colors.red,
         ),
         Expanded(
           flex: 5,
