@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_dashboard/helpers/responsiveness.dart';
 import 'package:learn_dashboard/widgets/large_screen.dart';
+import 'package:learn_dashboard/widgets/side_menu.dart';
 import 'package:learn_dashboard/widgets/small_screen.dart';
 import 'package:learn_dashboard/widgets/top_nav.dart';
 
@@ -16,8 +17,11 @@ class SiteLayout extends StatelessWidget {
         largeScreen: LargeScreen(),
         mediumScreen: LargeScreen(),
         smallScreen: SmallScreen(),
+        customScreen: LargeScreen(),
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: SideMenu(),
+      ),
     );
   }
 }
